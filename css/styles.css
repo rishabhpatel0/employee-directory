@@ -13,19 +13,15 @@ body {
   background-color: #121212;
   color: #e0e0e0;
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
 }
 
 main {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  min-height: 100vh;
 }
 
 /* BUTTONS */
-
 button {
   background-color: #FFFDF6;
   color: black;
@@ -39,10 +35,9 @@ button {
 
 button:hover {
   transform: translateY(-1px);
-  background-color:black;
-  color:white;
+  background-color: black;
+  color: white;
 }
-
 
 .search-container {
   display: flex;
@@ -146,7 +141,7 @@ button:hover {
   justify-content: space-between;
 }
 
-
+/* POPUP */
 .popup {
   position: fixed;
   top: 0;
@@ -189,7 +184,7 @@ button:hover {
   justify-content: space-between;
 }
 
-/*  FILTER SIDEBAR */
+/* FILTER SIDEBAR */
 .filter-sidebar {
   position: fixed;
   right: 0;
@@ -239,7 +234,7 @@ button:hover {
   margin-right: 10px;
 }
 
-/* PAGINATION CONTROLS  */
+/* PAGINATION CONTROLS */
 .pagination-controls {
   display: flex;
   align-items: center;
@@ -253,7 +248,7 @@ button:hover {
   font-weight: 500;
 }
 
-/*  FOOTER  */
+/* FOOTER */
 .footer {
   text-align: center;
   padding: 20px;
@@ -263,13 +258,14 @@ button:hover {
   color: #999;
 }
 
-/*  MEDIA QUERIES  */
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
   .search-container,
   .sort-container,
   .pagination-controls {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 10px;
   }
 
   .employee-card {
@@ -281,5 +277,42 @@ button:hover {
     gap: 15px;
     justify-content: center;
   }
-}
 
+  .popup-content {
+    width: 90%;
+  }
+
+  .popup-content input {
+    font-size: 16px;
+  }
+
+  .popup-actions button {
+    width: 48%;
+  }
+
+  .filter-sidebar {
+    width: 100%;
+    height: auto;
+    max-height: 90%;
+    overflow-y: auto;
+    bottom: 0;
+    top: auto;
+    padding: 15px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .filter-sidebar h3 {
+    font-size: 18px;
+  }
+
+  .filter-sidebar label,
+  .filter-sidebar input {
+    font-size: 14px;
+  }
+
+  .footer {
+    font-size: 13px;
+    padding: 15px;
+  }
+}
