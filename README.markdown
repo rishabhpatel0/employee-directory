@@ -40,6 +40,7 @@ A simple **Employee Management Dashboard** built using **HTML**, **CSS**, **Java
 
 - Getting FreeMarker to correctly render embedded JavaScript and HTML together.
 - Ensuring that Edit/Delete actions work correctly without relying on external APIs.
+- Managing in-memory employee data for all CRUD operations without backend.
 - Validating email formats and updating employee data smoothly.
 
 ### 🚀 Improvements for the Future
