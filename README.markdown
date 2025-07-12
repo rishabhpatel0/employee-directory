@@ -48,4 +48,3 @@ A simple **Employee Management Dashboard** built using **HTML**, **CSS**, **Java
 - Replace mock data with live data from a backend or database.
 - Add animations, form validation, and toast notifications for better UX.
 - Use LocalStorage or REST API to persist data changes.
-- Make it fully responsive with a mobile-first design.
