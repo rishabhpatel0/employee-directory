@@ -30,9 +30,9 @@ A simple **Employee Management Dashboard** built using **HTML**, **CSS**, **Java
    java -cp .;freemarker-2.3.xx.jar Main
    ```
 
-4. The rendered file `output.html` will be generated in the root directory.
+4. The rendered file `index.html` will be generated in the root directory.
 
-5. Open `output.html` in a browser to view the UI.
+5. Open `index.html` in a browser to view the UI.
 
 ## 🧠 Reflection
 
