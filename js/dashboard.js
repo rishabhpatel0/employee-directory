@@ -1,20 +1,28 @@
 "use strict";
-
-// Load  employee data 
-let employees = Array.from(document.querySelectorAll(".employee-card")).map(card => ({
-  id: card.dataset.id,
-  firstName: card.querySelector("h2").textContent.split(" ")[0],
-  lastName: card.querySelector("h2").textContent.split(" ")[1],
-  email: card.querySelector("p:nth-of-type(2)").textContent.replace("Email:", "").trim(),
-  department: card.querySelector("p:nth-of-type(3)").textContent.replace("Department:", "").trim(),
-  role: card.querySelector("p:nth-of-type(4)").textContent.replace("Role:", "").trim()
-}));
-
 let currentPage = 1;
 let pageSize = 10;
+let employees=[];
 
 // On DOM ready
 document.addEventListener("DOMContentLoaded", () => {
+  fetch("https://jsonplaceholder.typicode.com/users")
+    .then(res => res.json())
+    .then(data => {
+      employees = data.map(user => ({
+        id: user.id.toString(),
+        firstName: user.name.split(" ")[0],
+        lastName: user.name.split(" ")[1] || "",
+        email: user.email,
+        department: user.company?.name || "General",
+        role: user.company.bs 
+      }));
+      renderCards(employees);
+    })
+    .catch(err => {
+      console.error("Error fetching users:", err);
+      alert("Could not load users");
+    });
+
   document.getElementById("addEmployeeBtn").addEventListener("click", () =>
     document.getElementById("popup").classList.remove("hidden")
   );
