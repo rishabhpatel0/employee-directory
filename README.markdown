@@ -10,6 +10,7 @@ A simple **Employee Management Dashboard** built using **HTML**, **CSS**, **Java
 -Code editor (e.g., VS Code)
 
 ### 📂 Folder Structure
+~~~
    project-root/
    │
    ├─ index.html
@@ -17,6 +18,7 @@ A simple **Employee Management Dashboard** built using **HTML**, **CSS**, **Java
    │   └─ styles.css
    └─ js/
        └─ dashboard.js
+~~~
    
 
 ## 🚀 Running the Project
